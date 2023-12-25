@@ -1,9 +1,9 @@
 # Chat App (MERN)
 
-<b>Talk to your friends! 🥳</b>
+<b>Let's Talk</b>
 
->This Chat App is a <b>Full Stack Chatting App.</b> <br>
->Uses Socket.io for <b>real time communication</b> and stores user details in encrypted format in <b>Mongo DB Database.</b>
+
+>Uses Socket.io for <b>real time communication</b>
 
 
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=flat-square&logo=mongodb&logoColor=white)
