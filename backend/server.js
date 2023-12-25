@@ -71,7 +71,7 @@ const io = require("socket.io")(server, {
 
     socket.on("setup", (userData) => {
         socket.join(userData._id);
-       // console.log(userData._id);
+        //console.log(userData._id);
         socket.emit("connected");
       });
 
