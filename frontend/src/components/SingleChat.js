@@ -18,8 +18,8 @@ import animationData from "../animations/typing.json";
 
 import io from "socket.io-client";
 
-//const ENDPOINT = "http://localhost:5000/"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
-const ENDPOINT ="https://chat-app-yrqb.onrender.com";
+const ENDPOINT = "http://localhost:5000/"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+//const ENDPOINT ="https://chat-app-yrqb.onrender.com";
 var socket, selectedChatCompare;
 
 
