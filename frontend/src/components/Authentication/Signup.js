@@ -94,7 +94,7 @@ const Signup = () => {
   }
 
   // Email validation (basic check)
-  const emailRegex = /^[^\s@]+@[^\s@]+\.gmail\.com$/;
+  const emailRegex = /^[^\s@]+@gmail\.com$/;
   if (!emailRegex.test(email)) {
     toast({
       title: "Invalid Email",
