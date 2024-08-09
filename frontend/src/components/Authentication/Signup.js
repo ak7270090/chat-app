@@ -26,9 +26,10 @@ const Signup = () => {
       isClosable: true,
       position: "bottom",
     });
+    setPicLoading(false);
     return;
   }
-  console.log("pcs",pics);
+  //console.log("pcs",pics);
   if (pics.type === "image/jpeg" || pics.type === "image/png") {
     const data = new FormData();
     data.append("file", pics);
@@ -41,11 +42,11 @@ const Signup = () => {
       .then((res) => res.json())
       .then((data) => {
         setPic(data.url.toString());
-        console.log(data.url.toString());
+        //console.log(data.url.toString());
         setPicLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
         setPicLoading(false);
       });
   } else {
@@ -76,6 +77,53 @@ const Signup = () => {
     setPicLoading(false);
     return;
   }
+
+  // Name validation
+  const nameRegex = /^[a-zA-Z]+$/;
+  if (!nameRegex.test(name)) {
+    toast({
+      title: "Invalid Name",
+      description: "Name should contain only alphabets.",
+      status: "warning",
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    });
+    setPicLoading(false);
+    return;
+  }
+
+  // Email validation (basic check)
+  const emailRegex = /^[^\s@]+@[^\s@]+\.gmail\.com$/;
+  if (!emailRegex.test(email)) {
+    toast({
+      title: "Invalid Email",
+      description: "Please enter a valid Gmail address.",
+      status: "warning",
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    });
+    setPicLoading(false);
+    return;
+  }
+
+  //password validation using regular expression
+  const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  if (!passwordRegex.test(password)) {
+    toast({
+      title: "Weak Password",
+      description:
+        "Password must contain at least one uppercase letter, one number, one special character, and be at least 8 characters long.",
+      status: "warning",
+      duration: 5000,
+      isClosable: true,
+      position: "bottom",
+    });
+    setPicLoading(false);
+    return;
+  }
+
   if (password !== confirmpassword) {
     toast({
       title: "Passwords Do Not Match",
@@ -84,9 +132,11 @@ const Signup = () => {
       isClosable: true,
       position: "bottom",
     });
+    setPicLoading(false);
     return;
   }
-  console.log(name, email, password, pic);
+  
+  //console.log(name, email, password, pic);
   try {
     const config = {
       headers: {
@@ -103,7 +153,7 @@ const Signup = () => {
       },
       config
     );
-    console.log(data);
+    //console.log(data);
     toast({
       title: "Registration Successful",
       status: "success",

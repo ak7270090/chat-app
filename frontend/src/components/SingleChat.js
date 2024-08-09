@@ -138,7 +138,7 @@ const sendMessage = async (event) => {
         config
       );
       //setNewMessage("");
-     console.log(data);
+     //console.log(data);
 
       socket.emit("new message", data);
       setMessages([...messages, data]);
