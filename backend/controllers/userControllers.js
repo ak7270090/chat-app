@@ -68,14 +68,14 @@ const allUsers = asyncHandler(async (req, res) => {
   const keyword = req.query.search
     ? {
         $or: [
-          { name: { $regex: req.query.search, $options: "i" } },
+          { name: { $regex: req.query.search, $options: "i" } }, //i means -> case insensitive
           { email: { $regex: req.query.search, $options: "i" } },
         ],
       }
     : {};
 
   const users = await User.find(keyword)
-  .find({ _id: { $ne: req.user._id } });
+  .find({ _id: { $ne: req.user._id } }); // another find to exclude current user from const users
   res.send(users);
 });
 

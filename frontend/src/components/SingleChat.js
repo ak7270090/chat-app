@@ -23,16 +23,14 @@ const ENDPOINT ="https://chat-app-yrqb.onrender.com";
 var socket, selectedChatCompare;
 
 
-// when i am importing these two below socket shows err
-// import Lottie from "react-lottie";
-// import animationData from "../animations/typing.json";
+
 
 const SingleChat = ({fetchAgain,setFetchAgain}) => {
   const [messages, setMessages] = useState ([]);
   const [loading, setLoading] = useState(false);
   const [newMessage, setNewMessage] = useState("");
   const [socketConnected, setSocketConnected] = useState(false);
- const [typing, setTyping] = useState(false);
+  const [typing, setTyping] = useState(false);
   const [istyping, setIsTyping] = useState(false);
   const toast = useToast();
 

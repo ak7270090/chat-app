@@ -17,6 +17,9 @@ useEffect(() => {
   setUser(userInfo);
 
  //if (!userInfo) history.push("/");
+   if(!userInfo){
+      navigate('/');
+   }
  
 }, [navigate]);
 

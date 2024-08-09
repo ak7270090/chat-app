@@ -9,7 +9,7 @@ import { ChatState } from '../Context/ChatProvider';
 const Chatpage = () => {
 
    //const history=useHistory();
-   const navigate=useNavigate();
+  const navigate=useNavigate();
   const {user}=ChatState();
   const [fetchAgain,setFetchAgain]=useState(false);
 

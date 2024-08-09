@@ -17,7 +17,7 @@ const Signup = () => {
 
  //const postDetails=()=>{};
  const postDetails = (pics) => {
-  setPicLoading(true);
+  setPicLoading(true); // loader will start at signup box 
   if (pics === undefined) {
     toast({
       title: "Please Select an Image!",

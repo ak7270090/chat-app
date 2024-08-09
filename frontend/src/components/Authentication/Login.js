@@ -8,7 +8,7 @@ const Login = () => {
   const toast = useToast();
   //const history = useHistory();
   const navigate=useNavigate();
-    const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -16,8 +16,8 @@ const Login = () => {
 
   //const submitHandler=()=>{};
   const submitHandler = async () => {
-    setLoading(true);
-    if (!email || !password) {
+    setLoading(true); // place loader at login box 
+    if (!email || !password) { 
       toast({
         title: "Please Fill all the Feilds",
         status: "warning",
