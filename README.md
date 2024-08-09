@@ -50,3 +50,16 @@ Database: <b>`Mongo DB`</b>
   - Create Group Chat
   - Update Group Name
   - Add / Remove Users from group
+
+<br>
+
+## Project Vision 
+- <b>`Add end to end encryption using asymmetric encryption`</b>
+- <b>`Identify profanity in messages and not allowed to send it.`</b>
+- <b>`Develop a search function to easily find messages and media inside a chat.`</b>
+- <b>`Allow documents like images, pdfs, videos & etc to share upto certain size limit `</b>
+- <b>`Add email verification feature`</b>
+
+
+ 
+    
